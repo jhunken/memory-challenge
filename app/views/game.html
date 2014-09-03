@@ -1,0 +1,6 @@
+<h1 ng-hide="cards.length">Loading Cards...</h1>
+<div class="row" ng-show="cards.length">
+  <div class="card-container col-sm-15" ng-repeat="card in cards">
+    <div class="card" card flash-duration-sec="startDuration" ng-class="{selected: card.target ? 'selected' : '', correctChoice: card.correctChoice ? 'correctChoice' : ''}" ng-click="checkCard(card, $index)"></div>
+  </div>
+</div>
